@@ -35,3 +35,18 @@ function createAddress(street, city , zipcode){
         zipcode
     };
 }
+
+//Solution Using Constructor Function
+//Remember for constructor fucntion we use PASCAL notation
+
+//Call the function up here
+
+let address3 = new Address('Nairobi', 'Nyalenda', '838783728');
+
+console.log(address3);
+
+function Address(street, city , zip){
+    this.street = street;
+    this.city = city;
+    this.zip = zip;
+}
