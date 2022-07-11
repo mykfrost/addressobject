@@ -42,11 +42,29 @@ function createAddress(street, city , zipcode){
 //Call the function up here
 
 let address3 = new Address('Nairobi', 'Nyalenda', '838783728');
-
+let address4 = new Address('Nairobi', 'Nyalenda', '838783728');
 console.log(address3);
 
 function Address(street, city , zip){
     this.street = street;
     this.city = city;
     this.zip = zip;
+}
+
+
+//Object Equality Exercise
+
+console.log(areEqual(address3, address4));
+
+console.log(areSame(address3, address4));
+
+
+function areEqual (address3 , address4){
+ return address3.street === address4.street &&
+ address3.city === address4.city &&
+ address3.zip === address4.zip ;
+}
+
+function areSame(address3, address4){
+return address3 === address4;
 }
